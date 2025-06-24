@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rafiqi Naz - Profil</title>
+  <title>MARKET PLACE BY POU</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -13,72 +13,61 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    body {
       font-family: 'Poppins', sans-serif;
-      height: 100%;
-      overflow-x: hidden;
-      background: #000;
-    }
-
-    video.bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.3;
-      filter: blur(2px) brightness(0.6);
+      background-color: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
 
     .container {
-      max-width: 500px;
-      margin: 80px auto;
-      padding: 40px 30px;
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(10px);
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px 20px;
+      background: rgba(174, 126, 247, 0.08);
+      backdrop-filter: blur(12px);
       border-radius: 20px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-      color: #fff;
-      animation: fadeIn 1s ease;
+      box-shadow: 0 10px 30px rgba(174, 126, 247, 0.3);
       text-align: center;
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      border: 4px solid #a87ff3;
-      box-shadow: 0 0 12px #a87ff3;
+      border: 4px solid #b387f4;
+      box-shadow: 0 0 14px #b387f4;
     }
 
     h1 {
-      font-size: 2em;
-      color: #e5d9ff;
+      font-size: 2.1em;
+      color: #dfc5ff;
     }
 
     .tagline {
       font-style: italic;
-      color: #ccc;
+      color: #cfcfcf;
       margin-bottom: 25px;
     }
 
     .info p {
       font-size: 1em;
-      margin: 15px 0;
-      padding-left: 12px;
-      border-left: 3px solid #c4a9f2;
+      margin: 12px 0;
+      padding-left: 10px;
+      border-left: 3px solid #c292f9;
     }
 
     .btn-wrap {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .btn {
-      background-color: #a87ff3;
+      background-color: #a66bff;
       border: none;
       color: white;
       padding: 12px 24px;
@@ -89,28 +78,28 @@
     }
 
     .btn:hover {
-      background-color: #925ee0;
+      background-color: #933ee0;
       transform: scale(1.05);
       box-shadow: 0 6px 16px rgba(146, 94, 224, 0.3);
     }
 
     .socials {
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .socials h3 {
       margin-bottom: 10px;
-      color: #e0d7f9;
+      color: #d9caff;
     }
 
     .socials a {
       display: inline-block;
-      margin: 10px;
+      margin: 6px;
       text-decoration: none;
       color: white;
       background: #925ee0;
-      padding: 10px 20px;
-      border-radius: 30px;
+      padding: 10px 18px;
+      border-radius: 25px;
       transition: 0.3s;
       font-size: 0.95em;
     }
@@ -120,57 +109,143 @@
       box-shadow: 0 0 10px rgba(123, 85, 216, 0.4);
     }
 
+    .product {
+      background: #1a1a2f;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(174, 126, 247, 0.4);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .product h2 {
+      margin: 15px 0 5px;
+      color: #d59cff;
+    }
+
+    .price {
+      font-size: 1.3em;
+      color: #ccfffc;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-button {
+      background: #25D366;
+      color: #fff;
+      padding: 12px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .whatsapp-button:hover {
+      background: #1ebe57;
+    }
+
     footer {
       font-size: 0.8em;
       color: #aaa;
       margin-top: 30px;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
-  <!-- 🎥 Background Video -->
-  <video class="bg-video" autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2023/06/29/172344-841753972_large.mp4" type="video/mp4">
-  </video>
-
-  <!-- 🔊 Musik Chill -->
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2023/03/30/audio_c59f2dc1b2.mp3" type="audio/mpeg">
-  </audio>
 
   <div class="container">
-    <!-- 🖼️ Gambar Profil -->
     <img src="https://img1.pixhost.to/images/6725/614964847_depayyy.jpg" alt="MABAR BANG" class="avatar">
-
-    <h1>ᎻᎬᎽ ᏴᎡϴ, ᏦᎬΝᎪᏞᏆΝ ᏀᏔ ᎡᎪҒᏆϘᏆ</h1>
-    <div class="tagline">𝗝𝗮𝗻𝗴𝗮𝗻 𝗺𝗲𝗿𝗮𝘀𝗮 𝗵𝗲𝗯𝗮𝘁 𝗱𝗮𝗻 𝗽𝘂𝗮𝘀 𝘁𝗲𝘁𝗮𝗽𝗹𝗮𝗵 𝗵𝗮𝘂𝘀 𝗮𝗸𝗮𝗻 𝗶𝗹𝗺𝘂 😝</div>
+    <h1>ᎻᎬᎽ ᏴᎡϴ, ᏦᎬΝᎪᏞᏆΝ ᏀᏔ ᏢϴႮ</h1>
+    <div class="tagline">TETAP LAH RENDAH HATI INGAT TERAPKAN ILMU PADI 😼</div>
 
     <div class="info">
-      <p><strong>Nama:</strong> Rafiqi Khairun Naz</p>
-      <p><strong>Kelas:</strong> Otw 1 SMA</p>
-      <p><strong>Hobi:</strong> Nonton anime & baca komik</p>
-      <p><strong>Status:</strong> Pemula 🌝🌚</p>
+      <p><strong>Di sini gw menyediakan</p>
+      <p><strong>Beberapa jasa</p>
+      <p><strong>Beberapa barang</p>
+      <p><strong>Yah intinya kebutuhan hosting</p>
+      <p><strong>Lu liat lengkap nya di bawah ato chat gw</p>
     </div>
 
     <div class="btn-wrap">
-      <button class="btn" onclick="alert('Salam kenal ya cuy 😘🥰')">Kenalan Yuk</button>
+      <button class="btn" onclick="alert('kenalin gw pou 😘🥰')">REAL CREATOR SCRIPT KAMIYA</button>
     </div>
 
-        <div class="socials">
-      <h3>🌐 Sosial Media</h3>
+    <div class="socials">
+      <h3>☏︎ Contact gw</h3>
       <a href="https://t.me/Pouskibudi" target="_blank">📨 Telegram</a>
-      <a href="https://wa.me/6283131354890" target="_blank">💬 WhatsApp</a>
-      <a href="https://instagram.com/_rfiqiw" target="_blank">📸 Instagram</a>
-    </div>
-      
-          <footer>
-      &copy; ©𐌐𐌀𐌅𐌉𐌒𐌉 𐌊𐋅𐌀𐌉𐌐𐌵𐌍 𐌍𐌀ⱿⱿ"
-    </footer>
+      <a href="https://wa.me/6287780293117" target="_blank">💬 WhatsApp</a>
+      <a href="https://wa.me/6283131354890" target="_blank">💬 WhatsApp2</a>
   </div>
+
+  <div class="product">
+    <img src="https://img1.pixhost.to/images/6727/614988440_skyzopedia.png" alt="💻 SCRIPT ATHENA">
+    <h2>💻 SCRIPT KAMIYA</h2>
+    <div class="price">💰 Harga: 30K</div>
+    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20athena" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://img1.pixhost.to/images/6727/614988440_skyzopedia.png" alt="💻 SCRIPT KAMIYA">
+    <h2>💻 SCRIPT KAMIYA</h2>
+    <div class="price">💰 Harga: 25K</div>
+    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://img1.pixhost.to/images/6727/614989802_skyzopedia.jpg" alt="🛒 RESELLER KAMIYA">
+    <h2>🛒 RESELLER KAMIYA</h2>
+    <div class="price">💰 Harga: 50K</div>
+    <div class="description">Reseller script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20reseler%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://files.catbox.moe/lnq82c.jpg" alt="🧠 OWNER KAMIYA">
+    <h2>🧠 OWNER KAMIYA</h2>
+    <div class="price">💰 Harga: 60K</div>
+    <div class="description">Owner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20owner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://files.catbox.moe/ty27lu.jpg" alt="💎 PARTNER KAMIYA">
+    <h2>💎 PARTNER KAMIYA</h2>
+    <div class="price">💰 Harga: 75K</div>
+    <div class="description">Partner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20partner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://files.catbox.moe/03ieum.jpg" alt="👑 CEO KAMIYA">
+    <h2>👑 CEO KAMIYA</h2>
+    <div class="price">💰 Harga: 100K</div>
+    <div class="description">Ceo script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%ceo%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://files.catbox.moe/hu0gfg.jpg" alt="TESTI??">
+    <h2>Pou icikiwir</h2>
+    <div class="description">Testimoni?</div>
+    <a class="whatsapp-button" href="https://whatsapp.com/channel/0029Vb7MMVMBlHpc8nBOVT3u" target="_blank">👉 Cek di sini</a>
+  </div>
+
+  <footer>
+    &copy; Pouicikiwir
+  </footer>
 </body>
 </html>
