@@ -1,398 +1,362 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MARKET PLACE BY POU</title>
-  <link rel="icon" href="https://emoji.slack-edge.com/T02FJ3V4SCM/kawaii/ba2c14c59737e5df.png" type="image/png">
-  <style>
-    <meta property="og:title" content="MARKETPLACE KAMIYA BY POU 🤩👌">
-  <meta property="og:image" content="https://files.catbox.moe/hu0gfg.jpg">
-  <meta property="og:description" content="Script WA Bot, Jasa, dan Produk Kelas Dewa!">
-  <meta name="theme-color" content="#a66bff">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-    html {
-      scroll-behavior: smooth;
+<!DOCTYPE html>  <html lang="id">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>MARKET PLACE BY POU</title>  
+  <link rel="icon" href="https://emoji.slack-edge.com/T02FJ3V4SCM/kawaii/ba2c14c59737e5df.png" type="image/png">    <!-- Open Graph Meta -->    <meta property="og:title" content="MARKETPLACE KAMIYA BY POU 🤩👌">  
+  <meta property="og:image" content="https://files.catbox.moe/hu0gfg.jpg">  
+  <meta property="og:description" content="Script WA Bot, Jasa, dan Produk Kelas Dewa!">  
+  <meta name="theme-color" content="#a66bff">    <style>  
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');  
+    html { scroll-behavior: smooth; }  
+    * { margin: 0; padding: 0; box-sizing: border-box; }  
+    body {  
+  font-family: 'Poppins', sans-serif;  
+  background-image: url('https://files.catbox.moe/w6jkws.jpg'); /* kamu bisa ganti URL-nya */  
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed;  
+  background-repeat: no-repeat;  
+  color: #fff;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  padding: 20px;  
+  padding-top: 60px;  
+  position: relative;  
+}  
+  
+body::before {  
+  content: "";  
+  position: fixed;  
+  top: 0; left: 0;  
+  width: 100%; height: 100%;  
+  background: rgba(0,0,0,0.85); /* Overlay gelap */  
+  z-index: -1;  
+}  
+    nav {  
+      position: fixed;  
+      top: 0;  
+      width: 100%;  
+      background: #1a1a2f;  
+      padding: 12px 0;  
+      text-align: center;  
+      z-index: 999;  
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);  
+    }  
+    nav a {  
+      color: #dfc5ff;  
+      margin: 0 20px;  
+      text-decoration: none;  
+      font-weight: bold;  
+    }  
+    nav a:hover { text-decoration: underline; }  
+    .fade-in { animation: fadeIn 1s ease-in; }  
+    @keyframes fadeIn {  
+      from { opacity: 0; transform: translateY(20px); }  
+      to { opacity: 1; transform: translateY(0); }  
+    }  
+    .container {  
+      max-width: 600px;  
+      margin: 60px auto;  
+      padding: 30px 20px;  
+      background: rgba(174, 126, 247, 0.08);  
+      backdrop-filter: blur(12px);  
+      border-radius: 20px;  
+      box-shadow: 0 10px 30px rgba(174, 126, 247, 0.3);  
+      text-align: center;  
+    }  
+    .avatar {  
+      width: 130px;  
+      height: 130px;  
+      border-radius: 50%;  
+      object-fit: cover;  
+      margin-bottom: 20px;  
+      border: 4px solid #b387f4;  
+      box-shadow: 0 0 14px #b387f4;  
+    }  
+    h1 { font-size: 2.1em; color: #dfc5ff; }  
+    .tagline {  
+      font-style: italic;  
+      color: #cfcfcf;  
+      margin-bottom: 25px;  
+    }  
+    .info p {  
+      font-size: 1em;  
+      margin: 12px 0;  
+      padding-left: 10px;  
+      border-left: 3px solid #c292f9;  
+    }  
+    .btn-wrap { margin-top: 20px; }  
+    .btn {  
+      background-color: #a66bff;  
+      border: none;  
+      color: white;  
+      padding: 12px 24px;  
+      font-size: 1em;  
+      border-radius: 30px;  
+      cursor: pointer;  
+      transition: all 0.3s ease;  
+    }  
+    .btn:hover {  
+      background-color: #933ee0;  
+      transform: scale(1.05);  
+      box-shadow: 0 6px 16px rgba(146, 94, 224, 0.3);  
+    }  
+    .socials {  
+      margin-top: 30px;  
+    }  
+    .socials h3 {  
+      margin-bottom: 10px;  
+      color: #d9caff;  
+    }  
+    .socials a {  
+      display: inline-block;  
+      margin: 6px;  
+      text-decoration: none;  
+      color: white;  
+      background: #925ee0;  
+      padding: 10px 18px;  
+      border-radius: 25px;  
+      transition: 0.3s;  
+      font-size: 0.95em;  
+    }  
+    .socials a:hover {  
+      background: #7a45d8;  
+      box-shadow: 0 0 10px rgba(123, 85, 216, 0.4);  
+    }  
+    .product {  
+      background: #1a1a2f;  
+      border-radius: 16px;  
+      box-shadow: 0 0 20px rgba(174, 126, 247, 0.4);  
+      max-width: 400px;  
+      padding: 20px;  
+      text-align: center;  
+      margin: 20px 0;  
+    }  
+    .product img { width: 100%; border-radius: 12px; }  
+    .product h2 {  
+      margin: 15px 0 5px;  
+      color: #d59cff;  
+    }  
+    .price {  
+      font-size: 1.3em;  
+      color: #ccfffc;  
+      margin-bottom: 10px;  
+    }  
+    .description {  
+      font-size: 0.95em;  
+      color: #ccc;  
+      margin-bottom: 20px;  
+    }  
+    .whatsapp-button {  
+      background: #25D366;  
+      color: #fff;  
+      padding: 12px 18px;  
+      text-decoration: none;  
+      border-radius: 8px;  
+      font-weight: bold;  
+      display: inline-block;  
+      transition: 0.3s;  
+    }  
+    .whatsapp-button:hover {  
+      background: #1ebe57;  
+    }  
+    footer {  
+      font-size: 0.8em;  
+      color: #aaa;  
+      margin-top: 30px;  
+      text-align: center;  
+    }  
+    #backToTop {  
+      position: fixed;  
+      bottom: 25px;  
+      right: 25px;  
+      background: #a66bff;  
+      color: white;  
+      padding: 10px 14px;  
+      border-radius: 50%;  
+      font-size: 18px;  
+      display: none;  
+      cursor: pointer;  
+      box-shadow: 0 0 12px rgba(174, 126, 247, 0.5);  
+      z-index: 99;  
+    }  
+    #backToTop:hover { background: #933ee0; }  
+    #welcomePopup {  
+      position: fixed;  
+      top: 0; left: 0;  
+      width: 100%; height: 100%;  
+      background: rgba(0,0,0,0.85);  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      z-index: 9999;  
+    }  
+    .popup-content {  
+      background: #1e1e2e;  
+      padding: 30px;  
+      border-radius: 16px;  
+      text-align: center;  
+      color: #fff;  
+      box-shadow: 0 0 20px rgba(174, 126, 247, 0.5);  
+      animation: fadeIn 1s ease-in-out;  
+    }  
+    .popup-content button {  
+      margin-top: 20px;  
+      background: #a66bff;  
+      border: none;  
+      padding: 10px 20px;  
+      color: white;  
+      border-radius: 10px;  
+      cursor: pointer;  
+      font-weight: bold;  
+      transition: 0.3s;  
+    }  
+    .popup-content button:hover {  
+      background: #933ee0;  
+    }  
+  </style>  </head>  
+<body>
+<footer>  
+    &copy; Pouicikiwir<br>  
+    Total Pengunjung: <span id="visitorCount">Loading...</span>  
+  </footer>    <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>    <script>  
+    
+    const backToTop = document.getElementById("backToTop");  
+    window.onscroll = () => {  
+      backToTop.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";  
+    };  
+  
+    function closePopup() {  
+      document.getElementById("welcomePopup").style.display = "none";  
     }
+    fetch('https://api.countapi.xyz/hit/pouicikiwir.marketplace/visits')  
+      .then(response => response.json())  
+      .then(data => {  
+        document.getElementById('visitorCount').textContent = data.value;  
+      })  
+      .catch(error => {  
+        console.error('Visitor counter error:', error);  
+        document.getElementById('visitorCount').textContent = 'Error';  
+      });  
+  </script>  </body>  
+</html>    <nav>  
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      padding-top: 60px; /* Agar konten tidak ketutupan navbar */
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #1a1a2f;
-      padding: 12px 0;
-      text-align: center;
-      z-index: 999;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    nav a {
-      color: #dfc5ff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 30px 20px;
-      background: rgba(174, 126, 247, 0.08);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(174, 126, 247, 0.3);
-      text-align: center;
-    }
-
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #b387f4;
-      box-shadow: 0 0 14px #b387f4;
-    }
-
-    h1 {
-      font-size: 2.1em;
-      color: #dfc5ff;
-    }
-
-    .tagline {
-      font-style: italic;
-      color: #cfcfcf;
-      margin-bottom: 25px;
-    }
-
-    .info p {
-      font-size: 1em;
-      margin: 12px 0;
-      padding-left: 10px;
-      border-left: 3px solid #c292f9;
-    }
-
-    .btn-wrap {
-      margin-top: 20px;
-    }
-
-    .btn {
-      background-color: #a66bff;
-      border: none;
-      color: white;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #933ee0;
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(146, 94, 224, 0.3);
-    }
-
-    .socials {
-      margin-top: 30px;
-    }
-
-    .socials h3 {
-      margin-bottom: 10px;
-      color: #d9caff;
-    }
-
-    .socials a {
-      display: inline-block;
-      margin: 6px;
-      text-decoration: none;
-      color: white;
-      background: #925ee0;
-      padding: 10px 18px;
-      border-radius: 25px;
-      transition: 0.3s;
-      font-size: 0.95em;
-    }
-
-    .socials a:hover {
-      background: #7a45d8;
-      box-shadow: 0 0 10px rgba(123, 85, 216, 0.4);
-    }
-
-    .product {
-      background: #1a1a2f;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(174, 126, 247, 0.4);
-      max-width: 400px;
-      padding: 20px;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .product h2 {
-      margin: 15px 0 5px;
-      color: #d59cff;
-    }
-
-    .price {
-      font-size: 1.3em;
-      color: #ccfffc;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      font-size: 0.95em;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .whatsapp-button {
-      background: #25D366;
-      color: #fff;
-      padding: 12px 18px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .whatsapp-button:hover {
-      background: #1ebe57;
-    }
-
-    footer {
-      font-size: 0.8em;
-      color: #aaa;
-      margin-top: 30px;
-    }
-
-    #backToTop {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #a66bff;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 50%;
-      font-size: 18px;
-      display: none;
-      cursor: pointer;
-      box-shadow: 0 0 12px rgba(174, 126, 247, 0.5);
-      z-index: 99;
-    }
-
-    #backToTop:hover {
-      background: #933ee0;
-    }
-
-    #welcomePopup {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .popup-content {
-      background: #1e1e2e;
-      padding: 30px;
-      border-radius: 16px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 0 20px rgba(174, 126, 247, 0.5);
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .popup-content button {
-      margin-top: 20px;
-      background: #a66bff;
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .popup-content button:hover {
-      background: #933ee0;
-    }
-  </style>
-</head>
 <body>
 
-  <nav>
-    <a href="#product-section">🛒 Produk</a>
-    <a href="#contact">☏ Kontak</a>
-  </nav>
-
-  <div id="welcomePopup">
-    <div class="popup-content">
-      <p>Selamat datang di toko ku, semoga kamu senang dan puas ya🤩🥰</p>
-      <button onclick="closePopup()">Masuk</button>
-    </div>
-  </div>
-
-  <div class="container fade-in">
-    <img src="https://img1.pixhost.to/images/6725/614964847_depayyy.jpg" alt="MABAR BANG" class="avatar">
-    <h1>ᎻᎬᎽ ᏴᎡϴ, ᏦᎬΝᎪᏞᏆΝ ᏀᏔ ᏢϴႮ</h1>
-    <div class="tagline">TETAP LAH RENDAH HATI INGAT TERAPKAN ILMU PADI 😼</div>
-
-    <div class="info">
-      <p><strong>Di sini gw menyediakan</strong></p>
-      <p><strong>Beberapa jasa</strong></p>
-      <p><strong>Beberapa barang</strong></p>
-      <p><strong>Yah intinya kebutuhan hosting</strong></p>
-      <p><strong>Lu liat lengkap nya di bawah ato chat gw</strong></p>
-    </div>
-
-    <div class="btn-wrap">
-      <button class="btn" onclick="alert('kenalin gw pou 😘🥰')">REAL CREATOR SCRIPT KAMIYA</button>
-    </div>
-
-    <div class="socials" id="contact">
-      <h3>☏︎ Contact gw</h3>
-      <a href="https://t.me/Pouskibudi" target="_blank">📨 Telegram</a>
-      <a href="https://wa.me/6287780293117" target="_blank">💬 WhatsApp</a>
-      <a href="https://wa.me/6283131354890" target="_blank">💬 WhatsApp2</a>
-    </div>
-  </div>
-
-  <div id="product-section">
-    <div class="product">
-    <img src="https://files.catbox.moe/rw9o7i.jpg" alt="📁 ADD FUNCTION">
-    <h2>📁 PASANG FUNCTION</h2>
-    <div class="price">💰 Harga: 5K</div>
-    <div class="description">Pasang 2 function 5k aja</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20pasangin%20sc%20gw%20function" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-  
-  <div class="product">
-    <img src="https://files.catbox.moe/rw9o7i.jpg" alt="📁 RENAME SCRIPT">
-    <h2>📁 RENAME SCRIPT</h2>
-    <div class="price">💰 Harga: 15K</div>
-    <div class="description">gw ini kang riname sejati cuy 🤓😂</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20pasangin%20sc%20gw%20function" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-  
-    <div class="product">
-    <img src="https://files.catbox.moe/7o2y0j.jpg" alt="📁 RECODE SCRIPT">
-    <h2>📁 RECODE SCRIPT</h2>
-    <div class="price">💰 Harga: 35k - 100K</div>
-    <div class="description">Function dari gw selow gacor 🥸👌</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20bikinin%20gw%20script%20gw%20chip" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <img src="https://files.catbox.moe/whtgda.jpg" alt="💻 SCRIPT ATHENA">
-    <h2>💻 SCRIPT ATHENA</h2>
-    <div class="price">💰 Harga: 30K</div>
-    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20athena" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://img1.pixhost.to/images/6727/614988440_skyzopedia.png" alt="💻 SCRIPT KAMIYA">
-    <h2>💻 SCRIPT KAMIYA</h2>
-    <div class="price">💰 Harga: 25K</div>
-    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://img1.pixhost.to/images/6727/614989802_skyzopedia.jpg" alt="🛒 RESELLER KAMIYA">
-    <h2>🛒 RESELLER KAMIYA</h2>
-    <div class="price">💰 Harga: 50K</div>
-    <div class="description">Reseller script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20reseler%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://files.catbox.moe/lnq82c.jpg" alt="🧠 OWNER KAMIYA">
-    <h2>🧠 OWNER KAMIYA</h2>
-    <div class="price">💰 Harga: 60K</div>
-    <div class="description">Owner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20saya%20mau%20join%20owner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://files.catbox.moe/ty27lu.jpg" alt="💎 PARTNER KAMIYA">
-    <h2>💎 PARTNER KAMIYA</h2>
-    <div class="price">💰 Harga: 75K</div>
-    <div class="description">Partner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20partner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://files.catbox.moe/03ieum.jpg" alt="👑 CEO KAMIYA">
-    <h2>👑 CEO KAMIYA</h2>
-    <div class="price">💰 Harga: 100K</div>
-    <div class="description">Ceo script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>
-    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%ceo%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>
-  </div>
-
-  <div class="product fade-in">
-    <img src="https://files.catbox.moe/hu0gfg.jpg" alt="TESTI??">
-    <h2>Pou icikiwir</h2>
-    <div class="description">Testimoni?</div>
-    <a class="whatsapp-button" href="https://whatsapp.com/channel/0029Vb7MMVMBlHpc8nBOVT3u" target="_blank">👉 Cek di sini</a>
-  </div>
-
-  <footer>&copy; Pouicikiwir</footer>
-
-  <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+  <audio id="bgMusic" loop>
+    <source src="https://files.catbox.moe/7dfo91.mpeg" type="audio/mpeg">
+  </audio>
 
   <script>
-    const backToTop = document.getElementById("backToTop");
-    window.onscroll = () => {
-      backToTop.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
-    };
-
-    function closePopup() {
-      document.getElementById("welcomePopup").style.display = "none";
-    }
+    const music = document.getElementById("bgMusic");
+    document.addEventListener("click", () => {
+      music.play().catch((e) => {
+        console.log("Autoplay gagal:", e);
+      });
+    }, { once: true });
   </script>
 </body>
-  </html>
+
+    <a href="#product-section">🛒 Produk</a>  
+    <a href="#contact">☏ Kontak</a>  
+  </nav>    <div id="welcomePopup">  
+    <div class="popup-content">  
+      <p>Selamat datang di toko ku, semoga kamu senang dan puas ya🤩🥰</p>  
+      <button onclick="closePopup()">Masuk</button>  
+    </div>  
+  </div>    <div class="container fade-in">  
+    <img src="https://img1.pixhost.to/images/6725/614964847_depayyy.jpg" alt="MABAR BANG" class="avatar">  
+    <h1>ᎻᎬᎽ ᏴᎡϴ, ᏦᎬΝᎪᏞᏆΝ ᏀᏔ ᏢϴႮ</h1>  
+    <div class="tagline">TETAP LAH RENDAH HATI INGAT TERAPKAN ILMU PADI 😼</div>  <div class="info">  
+  <p><strong>Di sini gw menyediakan</strong></p>  
+  <p><strong>Beberapa jasa</strong></p>  
+  <p><strong>Beberapa barang</strong></p>  
+  <p><strong>Yah intinya kebutuhan hosting</strong></p>  
+  <p><strong>Lu liat lengkap nya di bawah ato chat gw</strong></p>  
+</div>  
+
+<div class="btn-wrap">  
+  <button class="btn" onclick="alert('kenalin gw pou 😘🥰')">REAL CREATOR SCRIPT KAMIYA</button>  
+</div>  
+
+<div class="socials" id="contact">  
+  <h3>☏︎ Contact gw</h3>  
+  <a href="https://t.me/Pouskibudi" target="_blank">📨 Telegram</a>  
+  <a href="https://wa.me/6287780293117" target="_blank">💬 WhatsApp</a>  
+  <a href="https://wa.me/6283131354890" target="_blank">💬 WhatsApp2</a>  
+</div>
+
+  </div>    <div id="product-section">  
+    <div class="product">  
+    <img src="https://files.catbox.moe/rw9o7i.jpg" alt="📁 ADD FUNCTION">  
+    <h2>📁 PASANG FUNCTION</h2>  
+    <div class="price">💰 Harga: 5K</div>  
+    <div class="description">Pasang 2 function 5k aja</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20pasangin%20sc%20gw%20function" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product">  
+    <img src="https://files.catbox.moe/rw9o7i.jpg" alt="📁 RENAME SCRIPT">  
+    <h2>📁 RENAME SCRIPT</h2>  
+    <div class="price">💰 Harga: 15K</div>  
+    <div class="description">gw ini kang riname sejati cuy 🤓😂</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20pasangin%20sc%20gw%20function" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>  <div class="product">  
+<img src="https://files.catbox.moe/7o2y0j.jpg" alt="📁 RECODE SCRIPT">  
+<h2>📁 RECODE SCRIPT</h2>  
+<div class="price">💰 Harga: 35k - 100K</div>  
+<div class="description">Function dari gw selow gacor 🥸👌</div>  
+<a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20bikinin%20gw%20script%20gw%20chip" target="_blank">👉 Pesan via WhatsApp</a>
+
+  </div>    <div class="product">  
+    <img src="https://files.catbox.moe/whtgda.jpg" alt="💻 SCRIPT ATHENA">  
+    <h2>💻 SCRIPT ATHENA</h2>  
+    <div class="price">💰 Harga: 30K</div>  
+    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20athena" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://img1.pixhost.to/images/6727/614988440_skyzopedia.png" alt="💻 SCRIPT KAMIYA">  
+    <h2>💻 SCRIPT KAMIYA</h2>  
+    <div class="price">💰 Harga: 25K</div>  
+    <div class="description">😝 Script bug yang bikin kamu auto ngaceng</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20Pou%20mau%20beli%20sc%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://img1.pixhost.to/images/6727/614989802_skyzopedia.jpg" alt="🛒 RESELLER KAMIYA">  
+    <h2>🛒 RESELLER KAMIYA</h2>  
+    <div class="price">💰 Harga: 50K</div>  
+    <div class="description">Reseller script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20reseler%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://files.catbox.moe/lnq82c.jpg" alt="🧠 OWNER KAMIYA">  
+    <h2>🧠 OWNER KAMIYA</h2>  
+    <div class="price">💰 Harga: 60K</div>  
+    <div class="description">Owner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20saya%20mau%20join%20owner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://files.catbox.moe/ty27lu.jpg" alt="💎 PARTNER KAMIYA">  
+    <h2>💎 PARTNER KAMIYA</h2>  
+    <div class="price">💰 Harga: 75K</div>  
+    <div class="description">Partner script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%20partner%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://files.catbox.moe/03ieum.jpg" alt="👑 CEO KAMIYA">  
+    <h2>👑 CEO KAMIYA</h2>  
+    <div class="price">💰 Harga: 100K</div>  
+    <div class="description">Ceo script kamiya untuk benefit bisa langsung chat pou 🥰☺</div>  
+    <a class="whatsapp-button" href="https://wa.me/6287780293117?text=Bang%20pou%20mau%20join%ceo%20kamiya" target="_blank">👉 Pesan via WhatsApp</a>  
+  </div>    <div class="product fade-in">  
+    <img src="https://files.catbox.moe/hu0gfg.jpg" alt="TESTI??">  
+    <h2>Pou icikiwir</h2>  
+    <div class="description">Testimoni?</div>  
+    <a class="whatsapp-button" href="https://whatsapp.com/channel/0029Vb7MMVMBlHpc8nBOVT3u" target="_blank">👉 Cek di sini</a>  
+  </div>    <footer>&copy; Pouicikiwir</footer>    <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>    <script>  
+    const backToTop = document.getElementById("backToTop");  
+    window.onscroll = () => {  
+      backToTop.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";  
+    };  
+  
+    function closePopup() {  
+      document.getElementById("welcomePopup").style.display = "none";  
+    }  
+  </script>  </body>  
+</html>  
